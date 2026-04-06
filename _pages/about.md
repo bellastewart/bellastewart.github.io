@@ -11,6 +11,36 @@ This is the front page of a website that is powered by the [Academic Pages templ
 
  You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
 
+<h2 style="text-align: center; color: #83AEF2; font-size: 2.0em;">Selected Works</h2>
+
+<div style="display: flex; align-items: flex-start; margin-bottom: 2em; gap: 1.5em;">
+  <div style="flex: 0 0 220px;">
+    <img src="/images/paper1-thumb.png" alt="Paper 1 thumbnail" style="width: 100%; border: 1px solid #ddd;">
+  </div>
+  <div>
+    <a href="#" style="color: #83AEF2; font-size: 1.05em;">Paper Title Goes Here</a><br>
+    Author One, Author Two, Author Three<br>
+    <span style="color: #83AEF2;">Published in Journal Name (2024)</span><br><br>
+    Short description of the paper goes here. A sentence or two about what the work is about and why it matters.
+    <br><br>
+    <a href="#" style="color: #83AEF2;">Website</a> | <a href="#" style="color: #83AEF2;">Paper</a>
+  </div>
+</div>
+
+<div style="display: flex; align-items: flex-start; margin-bottom: 2em; gap: 1.5em;">
+  <div style="flex: 0 0 220px;">
+    <img src="/images/paper2-thumb.png" alt="Paper 2 thumbnail" style="width: 100%; border: 1px solid #ddd;">
+  </div>
+  <div>
+    <a href="#" style="color: #83AEF2; font-size: 1.05em;">Second Paper Title Goes Here</a><br>
+    Author One, Author Two<br>
+    <span style="color: #83AEF2;">Presented at Conference Name (2024)</span><br><br>
+    Short description of the second paper goes here. A sentence or two about what the work is about and why it matters.
+    <br><br>
+    <a href="#" style="color: #83AEF2;">GitHub</a> | <a href="#" style="color: #83AEF2;">Blog Post</a> | <a href="#" style="color: #83AEF2;">Paper</a>
+  </div>
+</div>
+
 A data-driven personal website
 ======
 Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
