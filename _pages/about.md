@@ -52,7 +52,7 @@ If any of these topics sparks your interest, I would love to connect via
   font-family: 'Instrument Serif', Georgia, serif;
   font-style: italic;
   font-weight: 400;
-  color: #6B67EE;
+  color: var(--global-theme-color);
 }
 .post article .publications em,
 .post article .publications strong,
@@ -165,9 +165,9 @@ If any of these topics sparks your interest, I would love to connect via
 .profile .profile-social a:hover {
   color: var(--global-theme-color);
   border-color: var(--global-theme-color);
-  background-color: rgba(107, 103, 238, 0.08);
+  background-color: rgba(232, 163, 61, 0.12);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(107, 103, 238, 0.15);
+  box-shadow: 0 6px 16px rgba(232, 163, 61, 0.20);
 }
 .profile .profile-social a i {
   font-size: 1.05rem;

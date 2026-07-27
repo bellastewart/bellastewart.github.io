@@ -5,37 +5,43 @@
 
 @use "sass:color";
 
-$red-color: #ca5670 !default;
-$red-color-dark: #a13d56 !default;
-$orange-color: #DE9B35 !default;
-$blue-color: #6B67EE !default;
-$blue-color-dark: #4440C6 !default;
-$cyan-color: #6B67EE !default;
-$light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
-$green-color: #30A667 !default;
-$green-color-lime: #b7d12a !default;
-$green-color-dark: #248052 !default;
-$green-color-light: #d2e9dd !default;
-$green-color-bright: #30A667 !default;
-$purple-color: #6B67EE !default;
-$med-purple-color: #9793F8 !default;
-$light-purple-color: #D4D3FA !default;
-$pink-color: #ca5670 !default;
-$pink-color-light: #f5dde2 !default;
-$yellow-color: #DE9B35 !default;
+// Munich palette -- the city's black-and-gold flag, the ochre of Bavarian
+// baroque facades (Theatinerkirche), terracotta rooftops, and Maerzen amber.
+// The variable NAMES are al-folio's and are referenced across the theme, so
+// they are kept even where the hue no longer matches the name.
 
-$grey-color: #4a4a6a !default;
-$grey-color-light: #9998B3 !default;
-$grey-color-dark: #1a1a2e;
-$grey-900: #1a1a2e;
+$red-color: #E04E1B !default; // vivid terracotta
+$red-color-dark: #B03A10 !default;
+$orange-color: #F07818 !default; // vivid orange
+$blue-color: #C25E00 !default; // repurposed: primary burnt gold
+$blue-color-dark: #9A4800 !default;
+$cyan-color: #C25E00 !default;
+$light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
+$green-color: #4C9A2A !default; // Englischer Garten
+$green-color-lime: #A8C42A !default;
+$green-color-dark: #37701E !default;
+$green-color-light: #DCEBCF !default;
+$green-color-bright: #4C9A2A !default;
+$purple-color: #C25E00 !default; // PRIMARY accent -- deep burnt gold
+$med-purple-color: #FFB020 !default; // dark-mode accent -- vivid gold
+$light-purple-color: #FFDFA8 !default; // pale ochre -- dividers, cards
+$pink-color: #E04E1B !default;
+$pink-color-light: #FBDCD0 !default;
+$yellow-color: #FFC107 !default; // vivid Munich gold
+
+// Greys are deliberately NEUTRAL -- a warm/brown grey muddies the dark theme.
+$grey-color: #6E6E6E !default;
+$grey-color-light: #A8A8A8 !default;
+$grey-color-dark: #121212; // also the dark-mode background
+$grey-900: #121212;
 
 $white-color: #ffffff !default;
-$black-color: #1a1a2e !default;
+$black-color: #121212 !default; // Munich black, neutral
 
-$bg-deep: #F9F9FE !default;
-$bg-surface: #F0F0F8 !default;
-$accent-light: #D4D3FA !default;
-$accent-bright: #4440C6 !default;
+$bg-deep: #FFFCF5 !default; // warm white
+$bg-surface: #FDF2E0 !default; // light sand
+$accent-light: #FFDFA8 !default;
+$accent-bright: #9A4800 !default; // deep burnt amber, hover
 
 // Theme colors
 
