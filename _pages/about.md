@@ -1,56 +1,179 @@
 ---
+layout: about
+title: About
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
+subtitle:
+
+profile:
+  align: right
+  image: prof_pic.png
+  image_circular: false # crops the image to make it circular
+  more_info: >
+    <p>your.email [at] mit.edu</p>
+
+announcements:
+  enabled: true # includes a list of news items
+  scrollable: false # adds a vertical scroll bar if there are more than 3 news items
+  limit: 5 # leave blank to include all the news in the `_news` folder
+
+selected_papers: true # includes a list of papers marked as "selected={true}"
+invited_talks: false # includes the invited talks listed in _data/talks.yml
+technical_articles: false
+social: true # includes social icons at the bottom of the page
 ---
+<!-- TODO: replace this placeholder bio with your own. The <em> spans render in
+     Instrument Serif via the styles at the bottom of this file. -->
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+Hi! I am a researcher at MIT working on <em>your research area</em>. Use this
+first paragraph to say what you study and what draws you to it.
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+Currently, I'm part of [a lab or group](#), where I work on **a short description
+of your main project**. Add a second clause here for another affiliation.
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+Describe the range of your research here - the problems you find interesting, the
+methods you reach for, and where you'd like to take them next. Inline links to
+[papers](#) and [preprints](#) read well in this layout.
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+If any of these topics sparks your interest, I would love to connect via
+[LinkedIn](#) or [email](#).
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+<style>
+.post article em {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  color: inherit;
+  font-size: 1.20em;
+  font-weight: bold;
+}
+.post article a em {
+  color: inherit;
+}
+.post .post-title .font-weight-bold {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #6B67EE;
+}
+.post article .publications em,
+.post article .publications strong,
+.post article .publications .title,
+.post article .publications .author,
+.post article .publications .periodical {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.post article .publications .title {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-weight: 500;
+  font-size: 1.35rem;
+}
+.post article .publications .author {
+  font-size: 0.85rem;
+  font-weight: 350;
+}
+.post article .publications .author > em {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-style: normal;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.post article .publications .periodical {
+  font-size: 0.8rem;
+}
+.post article .publications .periodical em {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-style: italic;
+  font-size: inherit;
+  font-weight: inherit;
+}
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](https://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+.post article .publications .talk-title {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--global-text-color);
+}
+.post article .publications .talk-meta {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 350;
+  line-height: 1.55;
+  color: var(--global-text-color-light);
+}
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+.post article .news .table-responsive {
+  max-height: 17rem !important;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+.post article hr.section-divider {
+  border: 0;
+  border-top: 1px solid var(--global-divider-color);
+  margin: 2.75rem 0 2rem;
+}
 
-**Markdown generator**
-
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
-
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
-
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
-
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+.post article a.section-more {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--global-theme-color);
+  text-decoration: none;
+  background-image: none;
+  background-size: 0 0;
+  border-bottom: none;
+}
+.post article a.section-more:hover {
+  color: var(--global-theme-color);
+  text-decoration: none;
+  background-image: none;
+  border-bottom: none;
+}
+.post article a.section-more .arrow {
+  display: inline-block;
+  margin-left: 0.15em;
+  color: var(--global-theme-color);
+  transition: transform 0.2s ease;
+}
+.post article a.section-more:hover .arrow {
+  transform: translateX(4px);
+}
+.profile .profile-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.85rem 0 0.6rem;
+}
+.profile .profile-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.6rem;
+  color: var(--global-text-color);
+  background-image: none;
+  background-size: 0 0;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease,
+    transform 0.2s ease, box-shadow 0.2s ease;
+}
+.profile .profile-social a:hover {
+  color: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+  background-color: rgba(107, 103, 238, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(107, 103, 238, 0.15);
+}
+.profile .profile-social a i {
+  font-size: 1.05rem;
+  margin: 0;
+}
+.profile .profile-social a i::before {
+  color: inherit;
+}
+</style>

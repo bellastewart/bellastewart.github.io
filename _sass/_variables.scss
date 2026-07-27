@@ -1,0 +1,57 @@
+/*******************************************************************************
+ * Variables used throughout the theme.
+ * To adjust anything, simply edit the variables below and rebuild the theme.
+ ******************************************************************************/
+
+@use "sass:color";
+
+$red-color: #ca5670 !default;
+$red-color-dark: #a13d56 !default;
+$orange-color: #DE9B35 !default;
+$blue-color: #6B67EE !default;
+$blue-color-dark: #4440C6 !default;
+$cyan-color: #6B67EE !default;
+$light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
+$green-color: #30A667 !default;
+$green-color-lime: #b7d12a !default;
+$green-color-dark: #248052 !default;
+$green-color-light: #d2e9dd !default;
+$green-color-bright: #30A667 !default;
+$purple-color: #6B67EE !default;
+$med-purple-color: #9793F8 !default;
+$light-purple-color: #D4D3FA !default;
+$pink-color: #ca5670 !default;
+$pink-color-light: #f5dde2 !default;
+$yellow-color: #DE9B35 !default;
+
+$grey-color: #4a4a6a !default;
+$grey-color-light: #9998B3 !default;
+$grey-color-dark: #1a1a2e;
+$grey-900: #1a1a2e;
+
+$white-color: #ffffff !default;
+$black-color: #1a1a2e !default;
+
+$bg-deep: #F9F9FE !default;
+$bg-surface: #F0F0F8 !default;
+$accent-light: #D4D3FA !default;
+$accent-bright: #4440C6 !default;
+
+// Theme colors
+
+$code-bg-color-light: rgba($purple-color, 0.05);
+$code-bg-color-dark: #2c3237 !default;
+
+// Font awesome location
+$fa-font-path: "../webfonts";
+
+// Tabler icons location
+$ti-font-path: "../fonts";
+
+// Back To Top button config
+$back-to-top-z-index: 10;
+$back-to-top-bottom: 30px;
+$back-to-top-right: 30px;
+$back-to-top-diameter: 40px;
+$back-to-top-height: $back-to-top-diameter;
+$back-to-top-width: $back-to-top-diameter;

@@ -1,0 +1,11 @@
+# Projects listed on the /projects/ page.
+# Placeholder entries -- replace with your own, or delete this file and
+# _pages/projects.md if you don't want a projects page.
+
+- title: Example Project
+  description: One-line description of what the project does.
+  url: "#"
+
+- title: Another Example Project
+  description: Another one-line description.
+  url: "#"
