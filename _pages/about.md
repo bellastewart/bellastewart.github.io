@@ -23,18 +23,18 @@ social: true # includes social icons at the bottom of the page
 <!-- The <em> spans render in Instrument Serif via the styles at the bottom of
      this file. -->
 
-Hi! My name is Bella. I am a PhD candidate at MIT working on
+Hi! I'm Bella. I am a PhD candidate at MIT working on
 <em>AI for Engineering Design</em>.
 
 I work in the [DeCoDE Lab](https://decode.mit.edu) in MIT Mechanical Engineering,
 advised by Prof. Faez Ahmed, where I study how to coordinate multi-agent large
 language models on engineering tasks that require human–AI collaboration. I am
 also a U.S. Department of Energy Computational Science Graduate Fellow (DOE CSGF)
-where I make computers go brrr.
+where I make computers go brrrrr.
 
-My research ranges from developing molecular design systems, knowledge substrates
-for agentic reasoning including knowledge graphs for materials design, and
-structural and material design optimization.
+My research ranges from developing AI for molecular design, knowledge substrates
+for agentic reasoning including knowledge graphs for materials design, and agentic frameworks for
+structural and materials design optimization algorithms.
 
 If any of these topics sparks your interest, I would love to connect via
 [LinkedIn](https://www.linkedin.com/in/isabella-stewart-a8b548169/) or
