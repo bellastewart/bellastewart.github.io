@@ -6,10 +6,10 @@ subtitle:
 
 profile:
   align: right
-  image: prof_pic.png
+  image: stewart2025.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>your.email [at] mit.edu</p>
+    <p>istewart [at] mit.edu</p>
 
 announcements:
   enabled: true # includes a list of news items
@@ -18,24 +18,27 @@ announcements:
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 invited_talks: false # includes the invited talks listed in _data/talks.yml
-technical_articles: false
 social: true # includes social icons at the bottom of the page
 ---
-<!-- TODO: replace this placeholder bio with your own. The <em> spans render in
-     Instrument Serif via the styles at the bottom of this file. -->
+<!-- The <em> spans render in Instrument Serif via the styles at the bottom of
+     this file. -->
 
-Hi! I am a researcher at MIT working on <em>your research area</em>. Use this
-first paragraph to say what you study and what draws you to it.
+Hi! My name is Bella. I am a PhD candidate at MIT working on
+<em>AI for Engineering Design</em>.
 
-Currently, I'm part of [a lab or group](#), where I work on **a short description
-of your main project**. Add a second clause here for another affiliation.
+Currently, I'm part of the [DeCoDE Lab](https://decode.mit.edu) at MIT Mechanical
+Engineering under Prof. Faez Ahmed, where I work on the coordination of
+multi-agent large language models for engineering tasks. I am also a U.S.
+Department of Energy Computational Science Graduate Research Fellow (DOE CSGF),
+where I get to make computers go brrr.
 
-Describe the range of your research here - the problems you find interesting, the
-methods you reach for, and where you'd like to take them next. Inline links to
-[papers](#) and [preprints](#) read well in this layout.
+My research ranges from developing molecular design systems, knowledge substrates
+for agentic reasoning including knowledge graphs for materials design, and
+structural and material design optimization.
 
 If any of these topics sparks your interest, I would love to connect via
-[LinkedIn](#) or [email](#).
+[LinkedIn](https://www.linkedin.com/in/isabella-stewart-a8b548169/) or
+[email](mailto:istewart@mit.edu).
 
 <style>
 .post article em {

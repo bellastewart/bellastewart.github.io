@@ -119,12 +119,12 @@
           {% endfor %}
 
           {%- comment -%}
-            CV nav item. Points at the built-in /cv/ page, which renders from
-            _data/cv.yml. To serve a PDF instead, drop it in assets/pdf/ and
-            swap the href for its path with target="_blank".
+            CV nav item. Opens the PDF itself in a new tab rather than routing through
+            a /cv/ page -- there is deliberately no _pages/cv.md, since having both
+            would put "CV" in the nav twice.
           {%- endcomment -%}
           <li class="nav-item">
-            <a class="nav-link" href="{{ '/cv/' | relative_url }}">CV</a>
+            <a class="nav-link" href="{{ '/assets/pdf/bella_CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">CV</a>
           </li>
 
           {% if site.search_enabled %}

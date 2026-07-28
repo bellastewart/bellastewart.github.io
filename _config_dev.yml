@@ -1,0 +1,12 @@
+# Local preview overrides. Layered on top of _config.yml by serve-site.sh and
+# NOT used by the GitHub Actions build, so production keeps responsive images.
+#
+# This node has no ImageMagick binary, so the -480/-800/-1400.webp variants are
+# never generated. With imagemagick enabled, _includes/figure.liquid emits a
+# <picture><source srcset="...webp"> that 404s, and the browser does not fall
+# back to the <img> -- once it has committed to a <source>, removing that
+# source (as the onerror handler does) will not make it re-select. The image
+# renders broken. Disabling imagemagick here makes figure.liquid emit a plain
+# <img>, which loads fine.
+imagemagick:
+  enabled: false

@@ -5,48 +5,72 @@
 
 @use "sass:color";
 
-// Munich palette -- the city's black-and-gold flag, the ochre of Bavarian
-// baroque facades (Theatinerkirche), terracotta rooftops, and Maerzen amber.
-// The variable NAMES are al-folio's and are referenced across the theme, so
-// they are kept even where the hue no longer matches the name.
+// Five-stop palette: slate -> slate-light -> mint -> teal -> mist.
+// This one is symmetric: the darks and the light stop simply swap roles
+// between modes. Slate is text on mist in light mode, and the canvas under
+// mist text in dark mode -- both directions measure ~9.9:1.
+// The greens carry the accent. Mint is bright enough for the dark canvas
+// (4.7:1) but too light for the mist canvas, so light mode uses a darkened
+// teal instead. The variable NAMES are al-folio's and are referenced across
+// the theme, so they are kept even where the hue no longer matches.
 
-$red-color: #E04E1B !default; // vivid terracotta
-$red-color-dark: #B03A10 !default;
-$orange-color: #F07818 !default; // vivid orange
-$blue-color: #C25E00 !default; // repurposed: primary burnt gold
-$blue-color-dark: #9A4800 !default;
-$cyan-color: #C25E00 !default;
+$slate-deep: #2f3b4b !default; // stop 1 -- text (light) / background (dark)
+$slate: #384659 !default; // stop 2 -- cards, raised surfaces (dark)
+$mint: #56b89a !default; // stop 3 -- accent, dark mode (4.7:1)
+$teal: #46a087 !default; // stop 4 -- secondary green
+$mist: #ecf0f0 !default; // stop 5 -- background (light) / text (dark)
+
+// Derived, because no stop in the palette works here:
+$teal-deep: #2e7460 !default; // accent, light mode -- stop 4 darkened (4.8:1)
+$teal-deeper: #245c4d !default; // hover, light mode
+$mist-muted: #9fb0b0 !default; // muted text on the dark canvas
+
+// Dark mode sits just off black, tinted toward mint -- dark enough to read as
+// black at a glance, but with enough hue that the canvas feels related to the
+// accent rather than neutral. The slate stops become ELEVATED surfaces (cards,
+// footer, code) rather than the canvas, which is what gives the dark theme its
+// depth: the canvas recedes, slate lifts. Dividers are low-contrast so they
+// read as structure, not as lines drawn on top.
+$black-bg: #0b1613 !default; // dark-mode canvas -- near-black, mint cast
+$slate-divider: #1c2b26 !default; // dividers, tinted to match the canvas
+
+$red-color: $teal-deep !default;
+$red-color-dark: $teal-deeper !default;
+$orange-color: $teal !default;
+$blue-color: $teal-deep !default; // repurposed: primary accent
+$blue-color-dark: $teal-deeper !default;
+$cyan-color: $teal !default;
 $light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
-$green-color: #4C9A2A !default; // Englischer Garten
-$green-color-lime: #A8C42A !default;
-$green-color-dark: #37701E !default;
-$green-color-light: #DCEBCF !default;
-$green-color-bright: #4C9A2A !default;
-$purple-color: #C25E00 !default; // PRIMARY accent -- deep burnt gold
-$med-purple-color: #FFB020 !default; // dark-mode accent -- vivid gold
-$light-purple-color: #FFDFA8 !default; // pale ochre -- dividers, cards
-$pink-color: #E04E1B !default;
-$pink-color-light: #FBDCD0 !default;
-$yellow-color: #FFC107 !default; // vivid Munich gold
+$green-color: $teal !default;
+$green-color-lime: $mint !default;
+$green-color-dark: $teal-deeper !default;
+$green-color-light: #d6e8e2 !default;
+$green-color-bright: $mint !default;
+$purple-color: $teal-deep !default; // PRIMARY accent
+$med-purple-color: $mint !default; // dark-mode accent
+$light-purple-color: #cfdad9 !default; // pale slate-mint -- dividers (light)
+$pink-color: $teal !default;
+$pink-color-light: #d6e8e2 !default;
+$yellow-color: $teal !default;
 
-// Greys are deliberately NEUTRAL -- a warm/brown grey muddies the dark theme.
+// Greys are deliberately NEUTRAL -- a tinted grey muddies the palette.
 $grey-color: #6E6E6E !default;
 $grey-color-light: #A8A8A8 !default;
-$grey-color-dark: #121212; // also the dark-mode background
-$grey-900: #121212;
+$grey-color-dark: $slate-deep; // also the dark-mode background
+$grey-900: $slate-deep;
 
 $white-color: #ffffff !default;
-$black-color: #121212 !default; // Munich black, neutral
+$black-color: $slate-deep !default;
 
-$bg-deep: #FFFCF5 !default; // warm white
-$bg-surface: #FDF2E0 !default; // light sand
-$accent-light: #FFDFA8 !default;
-$accent-bright: #9A4800 !default; // deep burnt amber, hover
+$bg-deep: $mist !default; // light-mode background
+$bg-surface: #ffffff !default; // cards, footer -- raised against mist
+$accent-light: #cfdad9 !default;
+$accent-bright: $teal-deeper !default; // hover
 
 // Theme colors
 
 $code-bg-color-light: rgba($purple-color, 0.05);
-$code-bg-color-dark: #2c3237 !default;
+$code-bg-color-dark: $slate !default;
 
 // Font awesome location
 $fa-font-path: "../webfonts";

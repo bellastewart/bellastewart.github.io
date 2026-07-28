@@ -16,7 +16,13 @@
     {% if site.imagemagick.enabled %}
       <source
         class="responsive-img-srcset"
-        {% if ext == 'gif' or ext == 'jpeg' or ext == 'jpg' or ext == 'png' or ext == 'tiff' %}
+        {%- comment -%}
+          'gif' is deliberately excluded: converting an animated GIF to WebP can drop
+          every frame but the first, and once a browser commits to a <source> it will
+          not fall back to the <img>. Animated previews would silently go still.
+          GIFs fall through to the branch below, which serves the file itself.
+        {%- endcomment -%}
+        {% if ext == 'jpeg' or ext == 'jpg' or ext == 'png' or ext == 'tiff' %}
           srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{ i }}w,{% endfor %}"
           type="image/webp"
         {% else %}
