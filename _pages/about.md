@@ -26,11 +26,10 @@ social: true # includes social icons at the bottom of the page
 Hi! My name is Bella. I am a PhD candidate at MIT working on
 <em>AI for Engineering Design</em>.
 
-Currently, I'm part of the [DeCoDE Lab](https://decode.mit.edu) at MIT Mechanical
-Engineering under Prof. Faez Ahmed, where I work on the coordination of
-multi-agent large language models for engineering tasks. I am also a U.S.
-Department of Energy Computational Science Graduate Research Fellow (DOE CSGF),
-where I get to make computers go brrr.
+I work in the [DeCoDE Lab](https://decode.mit.edu) in MIT Mechanical Engineering,
+advised by Prof. Faez Ahmed, where I study how to coordinate multi-agent large
+language models on engineering tasks that call for human–AI collaboration. I am
+also a U.S. Department of Energy Computational Science Graduate Fellow (DOE CSGF).
 
 My research ranges from developing molecular design systems, knowledge substrates
 for agentic reasoning including knowledge graphs for materials design, and
