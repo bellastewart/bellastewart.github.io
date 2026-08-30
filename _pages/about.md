@@ -29,8 +29,9 @@ Hi! I'm Bella. I am a PhD candidate at MIT working on
 I work in the [DeCoDE Lab](https://decode.mit.edu) in MIT Mechanical Engineering,
 advised by Prof. Faez Ahmed, where I study how to coordinate multi-agent large
 language models on engineering tasks that require human–AI collaboration. I am
-also a U.S. Department of Energy Computational Science Graduate Fellow (DOE CSGF)
-where I make computers go brrrrr.
+also a U.S. Department of Energy Computational Science Graduate Fellow
+([DOE CSGF](https://www.krellinst.org/csgf/profile/stewart2025)) where I make
+computers go brrrrr.
 
 My research ranges from developing AI for molecular design, knowledge substrates
 for agentic reasoning including knowledge graphs for materials design, and agentic frameworks for

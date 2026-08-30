@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-New preprint: [TO-Agents: A multi-agent AI pipeline for preference-guided
-topology optimization](https://arxiv.org/abs/2605.21622).
+New preprint: [TO-Agents: A multi-agent AI framework for subjective
+preference-guided topology optimization](https://arxiv.org/abs/2605.21622).
