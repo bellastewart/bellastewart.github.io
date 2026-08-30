@@ -13,21 +13,23 @@
       See https://www.debugbear.com/blog/responsive-images#w-descriptors-and-the-sizes-attribute and
       https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
     -->
-    {% if site.imagemagick.enabled %}
+    {%- comment -%}
+      'gif' is deliberately excluded: converting an animated GIF to WebP can drop
+      every frame but the first, and once a browser commits to a <source> it will
+      not fall back to the <img>. Animated previews would silently go still.
+
+      GIFs get no <source> at all, rather than a passthrough one. A <source> also
+      carries 'sizes', which pins the decode width to the thumbnail slot (e.g.
+      200px for publication previews); medium-zoom leaves <picture> intact when it
+      opens an image, so that constraint follows the GIF into the zoom overlay and
+      it renders upscaled from thumbnail resolution. With no <source>, the <img>
+      src -- the full-resolution file -- is what loads and what zooms.
+    {%- endcomment -%}
+    {% if site.imagemagick.enabled and ext != 'gif' %}
       <source
         class="responsive-img-srcset"
-        {%- comment -%}
-          'gif' is deliberately excluded: converting an animated GIF to WebP can drop
-          every frame but the first, and once a browser commits to a <source> it will
-          not fall back to the <img>. Animated previews would silently go still.
-          GIFs fall through to the branch below, which serves the file itself.
-        {%- endcomment -%}
-        {% if ext == 'jpeg' or ext == 'jpg' or ext == 'png' or ext == 'tiff' %}
-          srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{ i }}w,{% endfor %}"
-          type="image/webp"
-        {% else %}
-          srcset="{{ include.path | relative_url }}"
-        {% endif %}
+        srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{ i }}w,{% endfor %}"
+        type="image/webp"
         {% if include.sizes %}
           sizes="{{ include.sizes }}"
         {% else %}
