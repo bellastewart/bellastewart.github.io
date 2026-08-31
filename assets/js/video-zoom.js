@@ -13,7 +13,14 @@
       "border-radius:4px;box-shadow:0 10px 40px rgba(0,0,0,.5);transform:scale(.97);" +
       "transition:transform .25s ease;}" +
       ".video-zoom-overlay.is-open .video-zoom-content{transform:scale(1);}" +
-      "video.zoomable-video{cursor:zoom-in;}";
+      "video.zoomable-video{cursor:zoom-in;}" +
+      ".video-zoom-close{position:fixed;top:1.25rem;right:1.25rem;z-index:10001;" +
+      "display:flex;align-items:center;justify-content:center;width:2.25rem;" +
+      "height:2.25rem;padding:0;font-size:1.5rem;line-height:1;cursor:pointer;" +
+      "border-radius:50%;opacity:.85;transition:opacity .2s ease,transform .2s ease;" +
+      "color:var(--global-text-color);background-color:var(--global-bg-color);" +
+      "border:1px solid var(--global-divider-color);}" +
+      ".video-zoom-close:hover,.video-zoom-close:focus-visible{opacity:1;transform:scale(1.08);}";
     var style = document.createElement("style");
     style.id = "video-zoom-styles";
     style.textContent = css;
@@ -49,7 +56,17 @@
     big.muted = true;
     big.setAttribute("playsinline", "");
 
+    var closeBtn = document.createElement("button");
+    closeBtn.className = "video-zoom-close";
+    closeBtn.setAttribute("aria-label", "Close video");
+    closeBtn.innerHTML = "&times;";
+    closeBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      close(overlay);
+    });
+
     overlay.appendChild(big);
+    overlay.appendChild(closeBtn);
     document.body.appendChild(overlay);
     requestAnimationFrame(function () {
       overlay.classList.add("is-open");
